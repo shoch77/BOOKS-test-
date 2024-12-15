@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book.title }} - Book Details</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Book Details</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'list_books' %}">Back to Books</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="book-detail">
+        <h2>{{ book.title }}</h2>
+        <p><strong>Author:</strong> {{ book.author.name }}</p>
+        <p><strong>Details:</strong> This is a detailed description of the book.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Book Library</p>
+    </footer>
+</body>
+</html>

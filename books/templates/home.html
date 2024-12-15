@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Book Library</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Book Library</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'list_books' %}">View Books</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro">
+        <h2>Discover your next favorite book!</h2>
+        <p>Explore a collection of books and learn about their authors.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Book Library</p>
+    </footer>
+</body>
+</html>
